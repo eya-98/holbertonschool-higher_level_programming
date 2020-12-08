@@ -3,5 +3,6 @@ def print_last_digit(number):
     n = number
     if n < 0:
         n = n * -1
-    print("{:d}".format(number % 10), end="")
-    return number % 10
+    last = number % 10
+    print("{:d}".format(last), end="")
+    return last
