@@ -20,8 +20,8 @@ if __name__ == "__main__":
         print("{} - {} ".format(argv[1], argv[3]), end="")
         print("= {}".format(sub(int(argv[1]), int(argv[3]))))
     elif argv[2] == "*":
-        print("{} + {} ".format(argv[1], argv[3]), end="")
+        print("{} * {} ".format(argv[1], argv[3]), end="")
         print("= {}".format(mul(int(argv[1]), int(argv[3]))))
     elif argv[2] == "/":
-        print("{} + {} ".format(argv[1], argv[3]), end="")
+        print("{} / {} ".format(argv[1], argv[3]), end="")
         print("= {}".format(div(int(argv[1]), int(argv[3]))))
