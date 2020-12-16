@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
     if idx < 0:
-        return None
+        c = my_list
+        return c
     elif idx >= len(my_list):
-        return None
+        c = my_list
+        return c
     else:
-        for i in range(len(my_list)):
-            c = my_list
-            if i == idx:
-                c[i] = element
-    return c
+            c = my_list[:]
+            c[idx] = element
+            return (c)
