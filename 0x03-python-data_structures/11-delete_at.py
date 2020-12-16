@@ -5,9 +5,5 @@ def delete_at(my_list=[], idx=0):
     elif idx >= len(my_list):
         return my_list
     else:
-        list = []
-        for i in range(len(my_list)):
-            if i != idx:
-                list.append(my_list[i])
-        my_list = list
+        my_list.remove(my_list[idx])
         return my_list
