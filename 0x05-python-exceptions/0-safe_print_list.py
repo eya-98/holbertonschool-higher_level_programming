@@ -2,14 +2,11 @@
 def safe_print_list(my_list=[], x=0):
     j = 0
     k = 0
-    for k in my_list:
+    for k in range(0, x):
             try:
-                print("{}".format(k), end="")
+                print("{}".format(my_list[k]), end="")
                 j += 1
-                x -= 1
-                if x == 0:
-                    break
-            except exception:
+            except:
                 pass
     print("")
     return j
