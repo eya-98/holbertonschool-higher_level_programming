@@ -9,7 +9,7 @@ def safe_print_list(my_list=[], x=0):
                 x -= 1
                 if x == 0:
                     break
-            except:
+            except exception:
                 pass
     print("")
     return j
