@@ -6,12 +6,7 @@ class Square:
     """square"""
     def __init__(self, size=0, position=(0, 0)):
         """private instance attribute"""
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self._size = size
+        self._size = size
         self._position = position
 
     @property
@@ -50,6 +45,9 @@ class Square:
     def my_print(self):
         """print # and spaces"""
         if self._size == 0:
+            print("")
+            return
+        for i in range(self._position[1]):
             print("")
         for i in range(self._size):
             if self._position[1] == 0:
