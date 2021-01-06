@@ -19,7 +19,7 @@ class Square:
         """define position as a property"""
         return self._position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """sit the value of position"""
         if type(value) is not tuple or len(value) != 2 or \
