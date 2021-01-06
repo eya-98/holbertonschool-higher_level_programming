@@ -6,8 +6,8 @@ class Square:
     """square"""
     def __init__(self, size=0, position=(0, 0)):
         """private instance attribute"""
-        self._size = size
-        self._position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
