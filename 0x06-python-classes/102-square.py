@@ -16,16 +16,16 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if type(self._size) is not int:
+        if type(value) is not int:
             raise TypeError("size must be a number")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self._size = value
 
     def area(self):
         """define the area of a Square"""
-        return self._size ** 2
+        return self._size * self._size
 
     def __eq__(self, other):
         """Compare if square is equal to another by area"""
