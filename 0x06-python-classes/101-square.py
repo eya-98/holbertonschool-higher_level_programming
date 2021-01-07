@@ -1,56 +1,47 @@
 #!/usr/bin/python3
-"""square module"""
+"""class defines square"""
 
 
 class Square:
-    """creating a class to the square"""
-    
+    """square"""
     def __init__(self, size=0, position=(0, 0)):
-        """instantiation of size and position"""
-        self.size = size
-        self.position = position
-    
+        """private instance attribute"""
+        self._size = size
+        self._position = position
+
     @property
     def size(self):
-        """get of size"""
+        """define size as a property"""
         return self._size
-        
+
+    @property
+    def position(self):
+        """define position as a property"""
+        return self._position
+
+    @position.setter
+    def position(self, value):
+        """sit the value of position"""
+        if type(value) is not tuple or len(value) != 2 or \
+           type(value[0]) is not int or value[0] < 0 or \
+           type(value[1]) is not int or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self._position = value
+
     @size.setter
     def size(self, value):
-        """set the value of size"""
+        """sit the value of size"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self._size = value
-    
-    @property
-    def position(self):
-        """get the position"""
-        return self._position
-    
-    @position.setter
-    def position(self, value):
-        """set value to Position"""
-        if type(value) is not tuple or type(value[0]) is not int \
-           or type(value[1]) is not int or len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integer")
-        elif value[0] < 0 or value [1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integer")
-        else:
-            self._position = value
-    
+
     def area(self):
-        """return the area of the square"""
-        return self._size * self._size
-    
-    def my_square(self, value):
-        """print # or empty line"""
-        a = ""
-        if self.size == 0:
-            return a
-        a = "\n" * self.position[1] + (" " * self.position[0] + "#" * self.size + "\n") * self.size
+        """returns the square"""
+        a = self._size * self._size
         return a
 
     def my_print(self):
@@ -66,3 +57,12 @@ class Square:
                 for k in range(self.size):
                     print("#", end="")
                 print("")
+
+    def __str__(self):
+        """print # or empty line"""
+        a = ""
+        if self.size == 0:
+            return a
+        a = "\n" * self.position[1] + (" " * self.position[0] +
+                                       "#" * self.size + "\n") * self.size
+        return a
