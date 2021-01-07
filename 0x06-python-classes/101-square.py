@@ -34,7 +34,7 @@ class Square:
     def position(self, value):
         """set value to Position"""
         if type(value) is not tuple or type(value[0]) is not int \
-           or type(value[1]) is not int:
+           or type(value[1]) is not int or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integer")
         elif value[0] < 0 or value [1] < 0:
             raise TypeError("position must be a tuple of 2 positive integer")
@@ -49,11 +49,8 @@ class Square:
         """print # or empty line"""
         a = ""
         if self.size == 0:
-            a = ""
             return a
-        if self.position[1] < 0:
-            a = "\n"
-        a = a + (" " * self.position[0] + "#" * self.size + "\n") * self.size
+        a = "\n" * self.position[1] + (" " * self.position[0] + "#" * self.size + "\n") * self.size
         return a
 
     def my_print(self):
