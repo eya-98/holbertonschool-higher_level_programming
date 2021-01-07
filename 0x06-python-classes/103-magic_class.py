@@ -1,23 +1,21 @@
 #!/usr/bin/python3
 """create a module"""
-from math import pi
+import math
 
 
 class MagicClass:
-    """create a class"""
-
+    """ Circle class with radius """
     def __init__(self, radius=0):
-        """initiation of radius"""
+        """__init__ method initializes radius and test if numeric"""""
         self.__radius = 0
-        if type(radius) is not int or type(radius) is not float:
-            raise TypeError("radius must be a number")
-        else:
-            self._radius = radius
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError('radius must be a number')
+        self.__radius = radius
 
     def area(self):
-        """define the area of a circle"""
-        return pi * (self._radius ** 2)
+        """Calculate area of circle based on radius"""
+        return self.__radius ** 2 * math.pi
 
     def circumference(self):
-        """define the circumference"""
-        return pi * 2 * self._radius
+        """Calculate circumference with given radius"""
+        return 2 * math.pi * self.__radius
