@@ -4,9 +4,9 @@
 
 class _MagicClass__radius:
     """create a class"""
-    import pi from math
+    from math import pi
     
-    def __init__(radius):
+    def __init__(self, radius=0):
         """initiation of radius"""
         if type(radius) is not int or type(radius) is not float:
             raise TypeError("radius must be a number")
