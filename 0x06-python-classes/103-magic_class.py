@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """create a module"""
+from math import pi
 
 
 class MagicClass:
     """create a class"""
-    from math import pi
-    
+
     def __init__(self, radius=0):
         """initiation of radius"""
         self.__radius = 0
@@ -17,7 +17,7 @@ class MagicClass:
     def area(self):
         """define the area of a circle"""
         return pi * (self._radius ** 2)
-        
+
     def circumference(self):
         """define the circumference"""
         return pi * 2 * self._radius
