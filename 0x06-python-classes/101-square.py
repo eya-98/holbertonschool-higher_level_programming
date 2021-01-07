@@ -65,4 +65,4 @@ class Square:
             return a
         a = "\n" * self.position[1] + (" " * self.position[0] +
                                        "#" * self.size + "\n") * self.size
-        return a
+        return a[:-1]
