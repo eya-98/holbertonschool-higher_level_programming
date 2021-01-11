@@ -4,7 +4,7 @@
 
 class Rectangle:
     """define Rectangle class"""
-    
+
     def __init__(self, width=0, height=0):
         """instantiation of width and height)"""
         self._width = width
@@ -14,7 +14,7 @@ class Rectangle:
     def width(self):
         """retrieve width"""
         return self._width
-        
+
     @width.setter
     def width(self, value):
         """set width value"""
@@ -24,7 +24,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self._width = value
-    
+
     @property
     def height(self):
         """retrieve width"""
@@ -39,11 +39,11 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self._height = value
-    
+
     def area(self):
         """define area"""
         return self._width * self._height
-    
+
     def perimeter(self):
         """define the perimeter"""
         if width == 0 or height == 0:
