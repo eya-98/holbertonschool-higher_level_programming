@@ -7,13 +7,13 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """instantiation of width and height)"""
-        self._width = width
-        self._height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """retrieve width"""
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -23,12 +23,12 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
-            self._width = value
+            self.__width = value
 
     @property
     def height(self):
         """retrieve width"""
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -38,31 +38,31 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
-            self._height = value
+            self.__height = value
 
     def area(self):
         """define area"""
-        return self._width * self._height
+        return self.__width * self.__height
 
     def perimeter(self):
         """define the perimeter"""
-        if self._width == 0 or self._height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return (self._height + self._width) * 2
+        return (self.__height + self.__width) * 2
 
     def __print__(self):
         """print #"""
-        if self._width == 0 or self._height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        for i in range(self._height):
-            for j in range(self._weidth):
+        for i in range(self.__height):
+            for j in range(self.__weidth):
                 print('#')
 
     def __str__(self):
         """print #"""
         a = ''
-        if self._width == 0 or self._height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        a = (('#' * self._width) + '\n') * (self._height - 1)
-        a = a + ('#' * self.width)
+        a = (('#' * self.__width) + '\n') * (self.__height - 1)
+        a = a + ('#' * self.__width)
         return a
