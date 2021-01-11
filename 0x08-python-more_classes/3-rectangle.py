@@ -39,7 +39,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-
     def area(self):
         """define area"""
         return self.__width * self.__height
@@ -50,19 +49,11 @@ class Rectangle:
             return 0
         return (self.__height + self.__width) * 2
 
-    def __print__(self):
-        """print #"""
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        for i in range(self.__height):
-            for j in range(self.__weidth):
-                print('#')
-
     def __str__(self):
         """print #"""
         a = ''
         if self.__width == 0 or self.__height == 0:
-            return 0
+            return a
         a = (('#' * self.__width) + '\n') * (self.__height - 1)
-        a = a + ('#' * self.__width)
+        a += '#' * self.__width
         return a
