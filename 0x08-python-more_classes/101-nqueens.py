@@ -3,7 +3,7 @@ from sys import argv
 if len(argv) != 2:
     print("Usage: nqueens N")
     exit(1)
-elif type(argv[1]) is not int or int(argv[1]) >= 10 or int(argv[1]) < 0:
+elif argv[1].isdigit() is False:
     print("N must be a number")
     exit(1)
 elif int(argv[1]) < 4:
@@ -27,7 +27,7 @@ else:
                 L.append([i, k])
             m += 1
         num += 1
-        print(L)
+        print(L, end="")
         print("\n")
 
             
