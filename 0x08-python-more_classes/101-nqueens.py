@@ -27,7 +27,6 @@ else:
                 L.append([i, k])
             m += 1
         num += 1
-        print(L, end="")
-        print("\n")
+        print(L)
 
             
