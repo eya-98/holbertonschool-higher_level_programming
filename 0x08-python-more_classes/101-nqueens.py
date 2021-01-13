@@ -4,10 +4,10 @@ if len(argv) != 2:
     print("Usage: nqueens N")
     exit(1)
 elif type(argv[1]) is not int or int(argv[1]) >= 10:
-    raise TypeError("N must be a number")
+    print("N must be a number")
     exit(1)
 elif int(argv[1]) < 4:
-    raise ValueError("N must be at least 4")
+    print("N must be at least 4")
     exit(1)
 else:
     num = 2
