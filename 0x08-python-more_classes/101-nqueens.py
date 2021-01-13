@@ -28,5 +28,3 @@ else:
             m += 1
         num += 1
         print(L)
-
-            
