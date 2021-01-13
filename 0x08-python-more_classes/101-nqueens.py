@@ -3,7 +3,7 @@ from sys import argv
 if len(argv) != 2:
     print("Usage: nqueens N")
     exit(1)
-elif type(argv[1]) is not int and int(argv[1]) >= 10:
+elif type(argv[1]) is not int or int(argv[1]) >= 10:
     raise TypeError("N must be a number")
     exit(1)
 elif int(argv[1]) < 4:
