@@ -20,8 +20,10 @@ else:
                 k = k + num
             if k < int(argv[1]):
                 L.append([i, k])
+            elif k == int(argv[1]):
+                L.append([i, 0])
             elif k >= int(argv[1]):
-                k = abs(k - 1 - int(argv[1]))
+                k = k - 1 - int(argv[1])
                 L.append([i, k])
             m += 1
         num += 1
