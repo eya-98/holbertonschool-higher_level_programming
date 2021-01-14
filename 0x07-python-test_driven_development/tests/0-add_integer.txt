@@ -1,17 +1,18 @@
+Import the function
 	>>> add_integer = __import__("0-add_integer").add_integer	
+	
 
+
+    	>>> add_integer(1, -1)
+    	0
 
 
     	>>> add_integer(1, 2)
     	3
 
-
-    	>>> add_integer(100, -2)
-    	98
-
-
-        >>> add_integer(2, 5)
-        7
+	
+        >>> add_integer(1.4, 2)
+        3
 
 
         >>> add_integer("eya", 3)
