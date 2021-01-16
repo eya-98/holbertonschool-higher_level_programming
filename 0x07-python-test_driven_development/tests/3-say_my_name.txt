@@ -15,7 +15,7 @@
     ...
     TypeError: first_name must be a string
 
-    >>> say_my_name(['eya'], 'nani')
+    >>> say_my_name("eya", "nani", "22")
     Traceback (most recent call last):
     ...
-    TypeError: first_name must be a string
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
