@@ -8,7 +8,7 @@ Holberton test module
 
 def print_square(size):
     """
-    
+
     prints a square with the character #
     """
     if type(size) is not int:
@@ -20,5 +20,3 @@ def print_square(size):
             for j in range(size):
                 print('#', end="")
             print("")
-                
-        
