@@ -1,18 +1,9 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
+""" square """
+Rectangle = __import__("10-square").Square
 
 
 class Square(Rectangle):
-    """
-       Square that inherits from Rectangle (9-rectangle.py).
-       (task based on 10-square.py).
-    """
-
-    def __init__(self, size):
-        self.integer_validator("size", size)
-        Rectangle.__init__(self, size, size)
-        self.__size = size
-
-    def __str__(self):
-        """print details of a square"""
-        return "[Square] {}/{}".format(self.__size, self.__size)
+    """ class square """
+    def __str__(self, size):
+        return ("[Square] {}/{}".format(size, size))
