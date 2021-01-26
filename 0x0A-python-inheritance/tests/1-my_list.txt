@@ -9,7 +9,7 @@ Checking for module docstring:
 Checking for class docstring:
     >>> m = __import__("1-my_list").MyList.__doc__
     >>> len(m) > 1
-   True
+    True
 
 checking for method docstring:
     >>> m = __import__("1-my_list").MyList.print_sorted.__doc__
