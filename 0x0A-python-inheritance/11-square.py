@@ -1,9 +1,16 @@
 #!/usr/bin/python3
-""" square """
-Rectangle = __import__("10-square").Square
+""" Holberton Module """
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ class square """
-    def __str__(self, size):
-        return ("[Square] {}/{}".format(size, size))
+    """Square class inherits from rectangle class"""
+    def __init__(self, size):
+        """Square"""
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
+
+    def __str__(self):
+        """Square size"""
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
