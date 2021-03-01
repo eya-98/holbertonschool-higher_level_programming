@@ -1,3 +1,3 @@
 -- prints the full description
 
-select table first_table DESC
+SHOW CREATE table first_table
