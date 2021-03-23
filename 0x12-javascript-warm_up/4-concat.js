@@ -6,6 +6,3 @@ process.argv.forEach((val, index) => {
     console.log(process.argv[2] + ' is ' + process.argv[3]);
   }
 });
-if (var1 < 3) {
-  console.log('No argument');
-}
