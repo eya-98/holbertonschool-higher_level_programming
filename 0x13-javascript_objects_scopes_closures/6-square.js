@@ -5,7 +5,7 @@ module.exports = class Square extends X {
     let i, j;
     let line = '';
     if (c === undefined) {
-      return this.print;
+      return this.print();
     } else {
       for (i = 0; i < this.width; i++) {
         line += c;
