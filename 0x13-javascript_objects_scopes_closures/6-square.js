@@ -8,10 +8,10 @@ module.exports = class Square extends X {
   charPrint (c) {
     let i, j;
     let line = '';
-    for (i = 0; i < this.width; i++) {
-      if (c === undefined) {
-        line += 'X';
-      } else {
+    if (c === undefined) {
+      return this.print;
+    } else {
+      for (i = 0; i < this.width; i++) {
         line += 'C';
       }
     }
