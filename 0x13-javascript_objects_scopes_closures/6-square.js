@@ -8,7 +8,7 @@ module.exports = class Square extends X {
       return this.print;
     } else {
       for (i = 0; i < this.width; i++) {
-        line += 'C';
+        line += c;
       }
     }
     for (j = 0; j < this.height; j++) {
