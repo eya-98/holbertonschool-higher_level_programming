@@ -7,8 +7,7 @@ def print_state():
     import sys
     var = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
                             passwd=sys.argv[2],
-                            db=sys.argv[3],
-                            charset="utf8")
+                            db=sys.argv[3])
     cursor = var.cursor()
     query = "SELECT id,name FROM states ORDER by states.id ASC"
     cursor.Execute(query)
