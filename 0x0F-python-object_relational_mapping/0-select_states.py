@@ -17,7 +17,6 @@ def print_state():
     Rows = cursor.fetchall()
     for row in Rows:
         print(row)
-    var.commit()
     cursor.close()
     var.close()
 
