@@ -12,7 +12,7 @@ def print_state():
                             passwd=sys.argv[2],
                             db=sys.argv[3])
     cursor = var.cursor()
-    query = "SELECT id,name FROM states ORDER by states.id ASC"
+    query = "SELECT * FROM states ORDER by id ASC"
     cursor.execute(query)
     Rows = cursor.fetchall()
     for row in Rows:
