@@ -2,6 +2,8 @@
 """
 lists  all states from database hbtn_0e_0_usa
 """
+
+
 def print_state():
     """print states"""
     import MySQLdb
