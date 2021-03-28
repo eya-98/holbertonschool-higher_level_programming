@@ -19,5 +19,5 @@ def print_state():
     cursor.close()
     var.close()
 
-    if __name__ == "__main__":
-        print_state()
+if __name__ == "__main__":
+    print_state()
