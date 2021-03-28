@@ -11,6 +11,9 @@ var = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
 cursor = var.cursor()
 query = "SELECT id,name FROM states ORDER by states.id ASC"
 cursor.Execute(query)
+Rows = cursor.fetchall()
+for row in Rows:
+    print(row)
 var.commit()
 cursor.close()
 var.close()
