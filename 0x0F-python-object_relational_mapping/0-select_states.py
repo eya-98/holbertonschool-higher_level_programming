@@ -8,9 +8,11 @@ import sys
 
 def print_state():
     """print states"""
-    var = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
-                            passwd=sys.argv[2],
-                            db=sys.argv[3])
+    var = MySQLdb.connect(host='localhost',
+                          port=3306,
+                          user=sys.argv[1],
+                          passwd=sys.argv[2],
+                          db=sys.argv[3])
     cursor = var.cursor()
     query = "SELECT id,name FROM states ORDER by states.id ASC"
     cursor.execute(query)
