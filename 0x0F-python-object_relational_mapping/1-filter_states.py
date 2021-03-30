@@ -16,4 +16,3 @@ for row in rows:
     print (row)
 cursor.close()
 var.close()
-
