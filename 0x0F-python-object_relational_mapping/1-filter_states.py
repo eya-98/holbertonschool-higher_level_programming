@@ -2,6 +2,8 @@
 """use of MySQLdb"""
 import MySQLdb
 import sys
+
+
 def lists_states():
     var = MySQLdb.connect(host='localhost',
                           port=3306,
