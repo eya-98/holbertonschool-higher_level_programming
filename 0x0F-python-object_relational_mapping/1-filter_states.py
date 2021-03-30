@@ -5,13 +5,17 @@ import sys
 
 
 def lists_states():
-    var = MySQLdb.connect()
+    var = MySQLdb.connect(host='localhost',
+                          port=3306,
+                          user=sys.argv[1],
+                          passwd=sys.argv[2],
+                          db=sys.argv[3]))
     cursor = var.cursor()
     Query = "SELECT * FROM STATES WHERE states.name like 'N%'"
     cursor.execute(query)
     rows = var.fetchall()
     for row in rows:
-        print row
+        print (row)
     cursor.close()
     var.close()
 
