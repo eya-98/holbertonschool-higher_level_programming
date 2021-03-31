@@ -4,7 +4,7 @@ import sys
 import MySQLdb
 
 
-def display_value():
+def display_values():
     var = MySQLdb.connect(user=sys.argv[1],
                           passwd=sys.argv[2],
                           db=sys.argv[3],
@@ -12,14 +12,15 @@ def display_value():
                           host="localhost")
     cursor = var.cursor()
     word = sys.argv[4]
-    Query = """SELECT * FROM states WHERE states.name = '{:s}'
-            ORDER by id ASC""".format(word)
-    cursor.execute(Query)
+    query = """SELECT * FROM states WHERE states.name = '{:s}' ORDER by id ASC""".format(
+        word)
+    cursor.execute(query)
     ROWS = cursor.fetchall()
     for row in ROWS:
         print (row)
     cursor.close()
     var.close()
 
-    if __name__ == "__main__":
-        display_value()
+
+if __name__ == "__main__":
+    display_values()
