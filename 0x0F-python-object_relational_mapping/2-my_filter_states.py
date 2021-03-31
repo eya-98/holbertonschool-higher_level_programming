@@ -12,7 +12,8 @@ def display_values():
                           host="localhost")
     cursor = var.cursor()
     word = sys.argv[4]
-    query = """SELECT * FROM states WHERE states.name = '{:s}' ORDER by id ASC""".format(
+    query = """SELECT * FROM states WHERE states.name = '{:s}'
+               ORDER by id ASC""".format(
         word)
     cursor.execute(query)
     ROWS = cursor.fetchall()
