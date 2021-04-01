@@ -8,14 +8,13 @@ import MySQLdb
 
 
 def display_values():
-    var = MySQLdb.connect(
-                        host="localhost",
-                        port=3306,
-                        user=sys.argv[1],
-                        passwd=sys.argv[2],
-                        db=sys.argv[3],
-                        charset="utf8"
-                            )
+    var = MySQLdb.connect(host="localhost",
+                          port=3306,
+                          user=sys.argv[1],
+                          passwd=sys.argv[2],
+                          db=sys.argv[3],
+                          charset="utf8"
+                          )
     cursor = var.cursor()
     word = sys.argv[4]
     cursor.execute("""SELECT id,name FROM states where name = %s
