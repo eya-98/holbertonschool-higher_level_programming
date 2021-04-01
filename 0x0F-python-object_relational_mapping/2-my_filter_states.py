@@ -5,6 +5,7 @@ import MySQLdb
 
 
 def display_values():
+    """display value of searched state"""
     var = MySQLdb.connect(user=sys.argv[1],
                           passwd=sys.argv[2],
                           db=sys.argv[3],
@@ -13,10 +14,9 @@ def display_values():
     cursor = var.cursor()
     word = sys.argv[4]
     query = """SELECT * FROM states WHERE states.name = '{:s}'
-               ORDER by id ASC""".format(
-        word)
+               ORDER by id ASC""".format(word)
     cursor.execute(query)
-    ROWS = cursor.fetchall()
+    ROWS = cursor.fetchallmy()
     for row in ROWS:
         print (row)
     cursor.close()
