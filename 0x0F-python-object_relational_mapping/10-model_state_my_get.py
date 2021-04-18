@@ -2,7 +2,6 @@
 """
 prints the State object with the name passed as argument from the database
 """
-
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
