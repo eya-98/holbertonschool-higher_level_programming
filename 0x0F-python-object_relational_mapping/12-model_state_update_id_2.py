@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-changes the name of a State object from the database 
+changes the name of a State object from the database
 """
 import sqlalchemy
 from sqlalchemy import create_engine
@@ -15,6 +15,6 @@ if __name__ == "__main__":
     Ses = sessionmaker(bind=engine)
     session = Ses()
     state = session.query(State).filter(id=2).first()
-    state.name ="New Mexico"
+    state.name = "New Mexico"
     session.commit()
     session.close()
