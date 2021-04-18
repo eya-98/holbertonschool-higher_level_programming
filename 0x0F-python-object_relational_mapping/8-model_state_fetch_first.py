@@ -11,7 +11,7 @@ if __name == "__main__":
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1], argv[2], argv[3]))
     Base.metadata.create_all(engine)
-    Ses = sessionmaker(bind=eng)
+    Ses = sessionmaker(bind=engine)
     session = Ses()
     first = session.query(State).order_by(State.id).first()
     if first is None:
