@@ -14,11 +14,11 @@ if __name__ == "__main__":
                                                                     argv[2],
                                                                     argv[3]))
     Base.metadata.create_all(engine)
-    Ses = sessionmaker(bind=eng)
+    Ses = sessionmaker(bind=engine)
     session = Ses()
     state = session.query(State).filter_by(name=argv[4]).first()
     if state is None:
         print("Not found")
     else:
-        print(str(state.id))
+        print(state.id)
     session.close()
