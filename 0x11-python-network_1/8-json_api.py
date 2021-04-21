@@ -11,7 +11,7 @@ if __name__ == "__main__":
     try:
         q = sys.argv[1]
     except Exception:
-        lq = ''
+        q = ''
     res = requests.post(url, data={'q': q})
 
     try:
