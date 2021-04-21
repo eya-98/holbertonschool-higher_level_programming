@@ -8,16 +8,16 @@ import requests
 
 if __name__ == "__main__":
     url = 'http://0.0.0.0:5000/search_user'
-    try:
-        q = sys.argv[1]
-    except Exception:
-        q = ''
-    res = requests.post(url, data={'q': q})
+    if len(sys.argv) == 2:
+        q = argv[1]
+    else:
+        q = ""
+    res = requests.post(url, {'q': q})
 
     try:
         request = res.requests.json()
         if request:
-            print("[{}] {}".format(result.get('id'), result.get('name')))
+            print("[{}] {}".format(request.get('id'), request.get('name')))
         else:
             print('No result')
     except Exception:
