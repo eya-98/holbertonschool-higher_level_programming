@@ -11,10 +11,11 @@ if __name__ == "__main__":
     try:
         q = sys.argv[1]
     except Exception:
-        q= ''
-    body = requests.post(url, data={'q': q})
+        lq = ''
+    res = post(url, data={'q': q})
+
     try:
-        request = body.json()
+        request = res.json()
         if request:
             print("[{}] {}".format(result.get('id'), result.get('name')))
         else:
