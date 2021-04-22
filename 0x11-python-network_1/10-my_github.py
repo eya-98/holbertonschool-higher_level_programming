@@ -12,6 +12,6 @@ if __name__ == "__main__":
     passwd = argv[2]
     req = requests.get('https://api.github.com/user', auth=(username, passwd))
     try:
-        print(r.json()['id'])
+        print(req.json()['id'])
     except Exception:
         print('None')
