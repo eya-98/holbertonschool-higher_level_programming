@@ -18,7 +18,7 @@ def display_values():
     cursor.execute(query)
     ROWS = cursor.fetchallmy()
     for row in ROWS:
-        print (row)
+        print(row)
     cursor.close()
     var.close()
 
