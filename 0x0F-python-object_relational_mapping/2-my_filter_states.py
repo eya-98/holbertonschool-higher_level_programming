@@ -18,7 +18,8 @@ def display_values():
     cursor.execute(query)
     ROWS = cursor.fetchallmy()
     for row in ROWS:
-        print(row)
+        if row[1] == search:
+            print(row)
     cursor.close()
     var.close()
 
