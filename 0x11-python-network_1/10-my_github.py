@@ -11,7 +11,7 @@ if __name__ == "__main__":
     username = argv[1]
     passwd = argv[2]
     req = requests.get('https://api.github.com/user', auth=(username, passwd))
-    if status > 200:
+    if req.code_status > 200:
         print('None')
     else:
         print(r.json()['id'])
