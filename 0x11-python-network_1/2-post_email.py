@@ -10,4 +10,4 @@ if __name__ == "__main__":
     mail = urllib.parse.urlencode(value).encode('utf-8')
     requests = urllib.request.Request(url, mail)
     with urllib.request.urlopen(requests) as response:
-        print (response.read().decode('UTF-8'))
+        print(response.read().decode('UTF-8'))
