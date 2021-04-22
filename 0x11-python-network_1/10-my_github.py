@@ -11,7 +11,7 @@ if __name__ == "__main__":
     username = argv[1]
     passwd = argv[2]
     req = requests.get('' , auth=(username, passwd))
-    if req.status_code > 400:
+    if req.status_code > 200:
         print('None')
     else:
          print(r.json()['id'])
