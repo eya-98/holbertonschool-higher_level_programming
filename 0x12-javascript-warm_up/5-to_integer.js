@@ -1,7 +1,13 @@
 #!/usr/bin/node
-const var1 = process.argv[2];
-if (isNaN(var1) === true) {
-  console.log('Not a number');
-} else {
-  console.log(var1);
-}
+const process = require('process');
+argv = process.argv
+console.log(argv[2])
+if (argv.length === 3) {
+    console.log(argv[2])
+    if (isNaN(Number(argv[2])) == false) {
+        console.log(argv[2] + ": <first argument converted in integer>")
+     }
+     else {
+         console.log('Not a number')
+     }
+ }
